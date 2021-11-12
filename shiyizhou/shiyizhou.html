@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>十一周</title>
+		<style>
+			a {
+				text-decoration: none;
+			}
+
+			pre {
+				font-size: 18px;
+			}
+			h1{
+				color: #fff;
+				background-color: #000000;
+				width: 130px;
+				height: 60px;
+			    line-height: 60px;
+				margin-left: 20px;
+				border-radius: 30%;
+			}
+
+			.add {
+				color: #fff;
+				background-color: #337ab7;
+				border-color: #2e6da4;
+				padding: 2px 10px;
+				font-size: 18px;
+				border-radius: 10%;
+			}
+			.empty{
+				color: #fff;
+				background-color: #337ab7;
+				border-color: #2e6da4;
+				padding: 2px 10px;
+				font-size: 18px;
+				border-radius: 10%;
+			}
+			.qwe{
+				padding: 6px 10px;
+				border-radius: 5%;
+			}
+			.text{
+				width: 1500px;
+
+			}
+		</style>
+	</head>
+	<body>
+
+		<h1>SQL测试</h1>
+		<p>CACAD BCDaA CACDB CABAD</p>
+		<div class="text">
+			<img src="img/1.jpg" alt="1">
+			<img src="img/22.png" alt="2">
+			<img src="img/5.jpg" alt="3">
+		</div>
+		<hr>
+				<h1>增加删除</h1>
+				<input type="text" class="input" autofocus>
+				<button class="add">添加</button>
+				<button class="empty">清空所有</button>
+				<ol></ol>
+				<script src="./js/jquery.min.js"></script>
+				<script>
+				    $('.add').click( () => {
+				        if($('.input').val() !== ''){
+				            $('ol').prepend(`<li> <span>×</span> ${$('.input').val()}`);
+				            $('ol li > span').click( function () {
+				                $(this).parent().remove();
+				            });
+				            $('.input').val('');
+				        }else {
+				            alert('请输入内容！')
+				        }
+				        $('.input').focus();
+				    });
+				    $('.empty').click( () => {
+				        $('ol').text('');
+				        $('.input').val('')
+				        $('.input').focus();
+				    });
+				</script>
+		<hr>
+		<h1>php代码</h1>
+		<pre>
+		echo '1-100的数:';
+		for ($i=1;$i<=100;$i++){
+			echo $i.' ';
+			};
+			echo '<br>';
+			echo '<br>';
+		</pre>
+		<hr>
+		<pre>
+		echo '1-100的偶数:';
+		for ($i=2;$i<=100;$i+=2){
+		echo $i.' ';	
+		};
+			echo '<br>';
+			echo '<br>';
+		</pre>
+		<hr>
+		<pre>
+		echo '1-100:';
+		for ($i=1;$i<=100;$i++){
+			if($i%3===0&&$i%5===0){
+				echo 'foobar'.' ';
+			}else if($i%3===0){
+				echo 'foo'.' ';
+			}else if($i%5===0){
+				echo 'bar'.' ';
+			}else{
+				echo $i.' ';
+			}
+			};
+		</pre>
+	</body>
+</html>
